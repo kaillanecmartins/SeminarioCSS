@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Flexbox Layout 1</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* Direção dos itens flexíveis: linha (horizontal) */
+      flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
+      flex-flow: row wrap; /* Atalho para definir flex-direction e flex-wrap */
+      justify-content: space-between; /* Espaço entre os itens ao longo do eixo principal */
+      align-items: center; /* Centraliza itens verticalmente dentro da linha */
+      align-content: center; /* Centraliza o conteúdo do container verticalmente */
+      gap: 10px;
+      height: 400px; /* Altura fixa para demonstrar align-content */
+    }
+
+    .flex-item {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      flex: 1 1 100px; /* Cresce e encolhe com uma base de 100px */
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+  </div>
+</body>
+</html>

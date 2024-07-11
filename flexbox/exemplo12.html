@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Flexbox Responsivo 2</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around; /* Distribui espaço uniformemente entre os itens */
+      align-items: center; /* Centraliza itens verticalmente */
+      height: 60px; /* Altura fixa para o container */
+      background-color: #333;
+    }
+
+    .flex-item {
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column; /* Em telas menores, os itens ficam em coluna */
+        align-items: flex-start; /* Alinha itens ao início do container */
+        height: auto; /* Altura automática para o container */
+      }
+
+      .flex-item {
+        width: 100%; /* Itens ocupam 100% da largura disponível */
+        text-align: left; /* Alinha texto à esquerda */
+        padding: 15px; /* Aumenta o padding para melhor usabilidade */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">Home</div>
+    <div class="flex-item">About</div>
+    <div class="flex-item">Services</div>
+    <div class="flex-item">Contact</div>
+  </div>
+</body>
+</html>

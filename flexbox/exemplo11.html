@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Flexbox Responsivo 1</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
+      gap: 20px;
+      justify-content: center; /* Centraliza os itens horizontalmente */
+      align-items: stretch; /* Estica os itens para preencher a altura do container */
+    }
+
+    .flex-item {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+      flex: 1 1 200px; /* Cresce e encolhe com uma base de 200px */
+    }
+
+    @media (max-width: 800px) {
+      .flex-container {
+        flex-direction: column; /* Em telas menores, os itens ficam em coluna */
+      }
+
+      .flex-item {
+        flex: 1 1 100%; /* Itens ocupam 100% da largura disponível */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    <div class="flex-item">Item 6</div>
+  </div>
+</body>
+</html>

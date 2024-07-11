@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Grid Layout 1</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 100px 200px;
+      grid-template-areas: 
+        "header header header"
+        "sidebar content content";
+      gap: 10px;
+      justify-items: center; /* Centraliza itens horizontalmente dentro das células */
+      align-items: center; /* Centraliza itens verticalmente dentro das células */
+      justify-content: space-between; /* Distribui o grid dentro do container com espaço entre os itens */
+      align-content: center; /* Centraliza o grid dentro do container verticalmente */
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .grid-item {
+      background-color: lightgreen;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header grid-item">Header</div>
+    <div class="sidebar grid-item">Sidebar</div>
+    <div class="content grid-item">Content</div>
+  </div>
+</body>
+</html>
