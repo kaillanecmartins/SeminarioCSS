@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo de Flexbox Layout 2</title>
-  <style>
-    .flex-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      height: 400px;
-      border: 2px solid #000;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Flexbox Layout 2</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 400px;
+        border: 2px solid #000;
+      }
 
-    .flex-item {
-      background-color: lightcoral;
-      padding: 20px;
-      text-align: center;
-      border: 1px solid #ccc;
-    }
+      .flex-item {
+        background-color: lightcoral;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
 
-    .item1 {
-      order: 3; /* Item será exibido em terceiro lugar */
-      flex-grow: 2; /* Item cresce duas vezes mais que os outros */
-    }
+      .item1 {
+        order: 3; /* Item será exibido em terceiro lugar */
+        flex-grow: 2; /* Item cresce duas vezes mais que os outros */
+      }
 
-    .item2 {
-      order: 1; /* Item será exibido em primeiro lugar */
-      flex-shrink: 1; /* Item encolhe com a mesma velocidade dos outros */
-      flex-basis: 100px; /* Altura inicial do item */
-    }
+      .item2 {
+        order: 1; /* Item será exibido em primeiro lugar */
+        flex-shrink: 1; /* Item encolhe com a mesma velocidade dos outros */
+        flex-basis: 100px; /* Altura inicial do item */
+      }
 
-    .item3 {
-      order: 2; /* Item será exibido em segundo lugar */
-      flex: 1 1 50px; /* Atalho para flex-grow, flex-shrink e flex-basis */
-      align-self: center; /* Alinha o item ao centro do container horizontalmente */
-    }
-  </style>
-</head>
-<body>
-  <div class="flex-container">
-    <div class="flex-item item1">Item 1</div>
-    <div class="flex-item item2">Item 2</div>
-    <div class="flex-item item3">Item 3</div>
-  </div>
-</body>
+      .item3 {
+        order: 2; /* Item será exibido em segundo lugar */
+        flex: 1 1 50px; /* Atalho para flex-grow, flex-shrink e flex-basis */
+        align-self: center; /* Alinha o item ao centro do container horizontalmente */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">Item 1</div>
+      <div class="flex-item item2">Item 2</div>
+      <div class="flex-item item3">Item 3</div>
+    </div>
+  </body>
 </html>
